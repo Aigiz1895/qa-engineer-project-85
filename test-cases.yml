@@ -1,0 +1,203 @@
+---
+- summary: |
+    Проверка валидности email и пароля для авторизации
+  requirement: |
+    Пользователь не авторизуется с неверным паролем или email
+  prerequisites: |
+    Пользователь зарегистрирован. Открыта страница авторизации
+  test-data: |
+    Email = Sqwerty@gmail.com Пароль = 123123123
+    Email = Sqw@gmail.com Пароль = 123123123
+    Email = Sqwerty@gmail.com Пароль = 123
+  steps:
+    - Ввести в поля авторизации тестовые данные
+    - Нажать кнопку "Submit"
+  expected-result: |
+    Для каждого входного набора данных должно быть сообщение об ошибке ил успешная авторизация
+
+- summary: |
+    Проверка кнопки "Try simple battle"
+  requirement: |
+    При нажатии кнопку "Try simple battle" происходит переход на страницу с игрой
+  prerequisites:
+    Пользователь не авторизован
+  test-data: |
+    no-data
+  steps:
+    - Нажать кнопку "Try simple battle"
+  expected-result: |
+    Пользователь должен перейти на страницу с игрой
+
+- summary: |
+    Проверка создания игры
+  requirement: |
+    При нажатии кнопку "Create a game" появиться окно с созданием игры
+  prerequisites:
+    no-data
+  test-data: |
+    no-data
+  steps:
+    - Нажать кнопку "Create a game"
+    - Установить необходимые настройки
+    - Нажать кнопку "Create battle"
+  expected-result: |
+    Пользователь должен перейти на страницу с игрой
+
+- summary: |
+    Проверка настройки игры
+  requirement: |
+    Пользователь может настроить игру
+  prerequisites:
+    no-date
+  test-data: |
+    no-data
+  steps:
+    - Нажать кнопку "Create a game"
+    - Настроить игру
+    - Нажать кнопку "Create battle"
+  expected-result: |
+    Все настройки применились
+
+- summary: |
+    Проверить, видет-ли пользователь редактор и код аппонента
+  requirement: |
+    Пользователь может наблюдать за кодом аппонента
+  prerequisites:
+    no-data
+  test-data: |
+    no-data
+  steps:
+    - Нажать кнопку "Create a game"
+    - Выбрать аппонента
+    - Нажать кнопку "Create battle"
+  expected-result: |
+    Во время игры можно наблюдать за кодом аппонента
+
+- summary: |
+    Проверка решения
+  requirement: |
+    Пользователь может проверить решение
+  prerequisites:
+    no-data
+  test-data: |
+    no-data
+  steps:
+    - Нажать кнопку "Create a game"
+    - Выбрать аппонента
+    - Нажать кнопку "Create battle"
+    - Нажать кнопку "Run"
+  expected-result: |
+    Во время игры можно проверить решение
+
+- summary: |
+    Проверка переподключения к игре
+  requirement: |
+    Пользователь может переподключиться к игре
+  prerequisites:
+    no-data
+  test-data: |
+    no-data
+  steps:
+    - Нажать кнопку "Create a game"
+    - Выбрать аппонента
+    - Нажать кнопку "Create battle"
+    - Нажать кнопку "Back to home"
+    - Нажать кнопку "Continue"
+  expected-result: |
+    При нажатии на кнопку "Continue" пользователь переподключается
+
+- summary: |
+    Проверить, что пользователь может сдаться
+  requirement: |
+    Убедиться, что можно сдаться во время игры
+  prerequisites:
+    no-data
+  test-data: |
+    no-data
+  steps:
+    - Нажать кнопку "Create a game"
+    - Выбрать аппонента
+    - Нажать кнопку "Create battle"
+    - Нажать кнопку "Give up"(красный флаг)
+  expected-result: |
+    Во время игры можно сдаться
+
+- summary: |
+    Проверить, что пользователь может пройти обучение
+  requirement: |
+    Убедиться, что есть обучение
+  prerequisites:
+    no-data
+  test-data: |
+    no-data
+  steps:
+    - Нажать кнопку "Create a game"
+    - Выбрать аппонента
+    - Нажать кнопку "Create battle"
+    - Нажать кнопку "Show guide"
+  expected-result: |
+    Во время игры можно пройти обучение
+
+- summary: |
+    Проверить, что можно сменить язык текста в описании задания
+  requirement: |
+    Убедиться, что можно сменить язык
+  prerequisites:
+    no-data
+  test-data: |
+    no-data
+  steps:
+    - Нажать кнопку "Create a game"
+    - Выбрать аппонента
+    - Нажать кнопку "Create battle"
+    - Нажать кнопку "Expand"
+    - Нажать на выпадающий список "Ru"
+    - Сменить язык
+  expected-result: |
+    Пользователь может сменить язык текста в задании
+
+- summary: |
+    Проверить, что пользователь может сменить язык програмированния на котором выполняет задание
+  requirement: |
+    Убедиться, что есть выбор других языков програмированния
+  prerequisites:
+    no-data
+  test-data: |
+    no-data
+  steps:
+    - Нажать кнопку "Create a game"
+    - Выбрать аппонента
+    - Нажать кнопку "Create battle"
+    - Нажать на выпадающий список для языков програмированния
+    - Сменить язык
+  expected-result: |
+    Язык програмированния изменяется
+
+- summary: |
+    Проверить работу таймера
+  requirement: |
+    Убедиться, что в игре присутствует таймер
+  prerequisites:
+    no-data
+  test-data: |
+    no-data
+  steps:
+    - Нажать кнопку "Create a game"
+    - Выбрать аппонента
+    - Нажать кнопку "Create battle"
+  expected-result: |
+    Таймер присутствует
+
+- summary: |
+    Проверить работу чата
+  requirement: |
+    Убедиться, что пользователь может отправить сообщение в чат
+  prerequisites:
+    Находиться в лобби
+  test-data: |
+    no-data
+  steps:
+    - Ввести текст в поле ввода сообщения 
+    - Нажать кнопку "Send"
+  expected-result: |
+    Сообщение отправилось
