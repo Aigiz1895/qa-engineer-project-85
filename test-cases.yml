@@ -33,7 +33,7 @@
   requirement: |
     При нажатии кнопку "Create a game" появиться окно с созданием игры
   prerequisites:
-    no-data
+    Пользователь авторизован
   test-data: |
     no-data
   steps:
