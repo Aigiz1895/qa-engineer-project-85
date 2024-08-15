@@ -4,6 +4,10 @@
   status: pass
 
 - summary: |
+    Проверка восстановления пароля
+  status: fail
+
+- summary: |
     Проверка кнопки "Try simple battle"
   status: pass
 
