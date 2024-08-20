@@ -143,14 +143,8 @@
     Выбрана задача "rect_area"
     Выбран язык NodeJs
   test-data: |
-    const _ = require("lodash");
-    const R = require("rambda");
-
     const solution = (width, length) => {
-    return width * length;
-  };
-
-    module.exports = solution;
+    return width * length; };
   steps:
     - Нажать кнопку "Create a game"
     - Выбрать игру с ботом
